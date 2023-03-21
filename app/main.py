@@ -8,7 +8,7 @@ app = FastAPI()
 def read_root():
     return {"Hello": "World1"}
 
-@app.get("/")
+@app.get("/test")
 def AAAA():
     input_number = input()
     try:

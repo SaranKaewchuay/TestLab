@@ -1,11 +1,11 @@
-from fastapi import FastAPI
-from mangum import Mangum
+# from fastapi import FastAPI
+# from mangum import Mangum
 
-app = FastAPI()
+# app = FastAPI()
 
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
+# @app.get("/")
+# def read_root():
+#     return {"Hello": "World"}
 
 # @app.get("/items/{item_id}")
 # def read_item(item_id: int, q: str = None):
@@ -21,4 +21,4 @@ def read_root():
 #     return {"Hello": "World2"}
 
 
-handler = Mangum(app)
+# handler = Mangum(app)

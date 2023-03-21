@@ -62,7 +62,7 @@ workflows:
           filters:
             branches:
               only:
-                - main
+                - master
       - deploy-dev:
           context: TestLab
           requires:
@@ -70,4 +70,4 @@ workflows:
           filters:
             branches:
               only:
-                - main
+                - master

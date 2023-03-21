@@ -17,4 +17,9 @@ def read_name(name: str = None):
     return {"hello": name}
 
 
+@app.get("/test")
+def read_name():
+    return {"Hello": "World2"}
+
+
 handler = Mangum(app)

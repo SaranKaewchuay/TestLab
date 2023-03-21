@@ -13,18 +13,13 @@ def calculate_grade_api(score:int):
     grade = calculate_grade(score)
     return grade
 
-# @app.get("/items/{item_id}")
-# def read_item(item_id: int, q: str = None):
-#     return {"item_id": item_id, "q": q}
+@app.get("/items/{item_id}")
+def read_item(item_id: int):
+    return {"item_id": item_id}
 
-# @app.get("/hello/{name}")
-# def read_name(name: str = None):
-#     return {"hello": name}
-
-
-# @app.get("/test")
-# def read_name():
-#     return {"Hello": "World1"}
+@app.get("/hello/{name}")
+def read_name(name: str = None):
+    return {"hello": name}
 
 
 handler = Mangum(app)

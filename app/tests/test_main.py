@@ -9,8 +9,14 @@ def test_read_main():
     response = client.get("/")
     assert response.status_code == 200
     assert response.json() == {"Hello": "World"}
-    
 
+def test_read_main1():
+    response = client.get("/items/10")
+    expected_result = {"item_id": 10}
+    actual_result = response.json()
+    assert response.status_code == 200
+    assert expected_result == actual_result
+    
 def test_result_a_score_100():
     response = client.get("/calculate_grade/100")
     expected_result = "A"

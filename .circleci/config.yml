@@ -58,13 +58,13 @@ workflows:
   build-test-and-deploy:
     jobs:
       - build-and-test:
-          context: aws_lab10
+          context: testlab
           filters:
             branches:
               only:
                 - master
       - deploy-dev:
-          context: TestLab
+          context: testlab
           requires:
             - build-and-test
           filters:

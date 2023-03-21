@@ -1,4 +1,4 @@
-from function import number_to_month,validate_number
+from ..function import number_to_month,validate_number
 import pytest
 
 from fastapi.testclient import TestClient

@@ -1,11 +1,17 @@
-# from fastapi import FastAPI
-# from mangum import Mangum
+from fastapi import FastAPI
+from mangum import Mangum
+from .tests.calculate_grade import calculate_grade
 
-# app = FastAPI()
+app = FastAPI()
 
-# @app.get("/")
-# def read_root():
-#     return {"Hello": "World"}
+@app.get("/")
+def read_root():
+    return {"Hello": "World"}
+
+@app.get('/calculate_grade/{score}')
+def calculate_grade_api(score:int):
+    grade = calculate_grade(score)
+    return {'grade': grade}
 
 # @app.get("/items/{item_id}")
 # def read_item(item_id: int, q: str = None):
@@ -18,7 +24,7 @@
 
 # @app.get("/test")
 # def read_name():
-#     return {"Hello": "World2"}
+#     return {"Hello": "World1"}
 
 
-# handler = Mangum(app)
+handler = Mangum(app)

@@ -11,7 +11,7 @@ def read_root():
 @app.get('/calculate_grade/{score}')
 def calculate_grade_api(score:int):
     grade = calculate_grade(score)
-    return {'grade': grade}
+    return grade
 
 # @app.get("/items/{item_id}")
 # def read_item(item_id: int, q: str = None):
